@@ -49,6 +49,10 @@ function Singers(props) {
     updateDispatch(val, alpha);
   };
 
+  const enterDetail = (id)  => {
+    props.history.push (`/singers/${id}`);
+  };
+
   useEffect(() => {
     getHotSingerDispatch();
     // eslint-disable-next-line
@@ -62,7 +66,7 @@ function Singers(props) {
         {
           list.map((item, index) => {
             return (
-              <ListItem key={item.accountId + "" + index}>
+             <ListItem key={item.accountId+""+index} onClick={() => enterDetail (item.id)}>
                 <div className="img_wrapper">
                   <LazyLoad placeholder={<img width="100%" height="100%" src={require('./singer.png')} alt="music" />}>
                     <img src={`${item.picUrl}?param=300x300`} width="100%" height="100%" alt="music" />

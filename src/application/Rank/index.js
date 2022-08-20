@@ -8,7 +8,6 @@ import { EnterLoading } from "./../Singers/style";
 import { filterIndex } from '../../api/utils';
 import Scroll from "../../baseUI/scroll/index";
 
-
 function Rank(props) {
 
   const { rankList: list, loading } = props;
@@ -17,11 +16,10 @@ function Rank(props) {
   let globalStartIndex = filterIndex(rankList);
   let officialList = rankList.slice(0, globalStartIndex);
   let globalList = rankList.slice(globalStartIndex);
-
-  useEffect(() => {
-    getRankListDataDispatch();
-  }, []);
-
+  // 实现跳转路由函数
+  const enterDetail = (detail) => {
+    props.history.push(`/rank/${detail.id}`)
+  }
   // 这是渲染榜单列表函数，传入 global 变量来区分不同的布局方式
   const renderRankList = (list, global) => {
     return (
@@ -29,7 +27,7 @@ function Rank(props) {
         {
           list.map((item) => {
             return (
-              <ListItem key={item.coverImgId} tracks={item.tracks}>
+              <ListItem key={item.coverImgId} tracks={item.tracks} onClick={() => enterDetail (item)}>
                 <div className="img_wrapper">
                   <img src={item.coverImgUrl} alt="" />
                   <div className="decorate"></div>
@@ -58,6 +56,10 @@ function Rank(props) {
 
   // 榜单数据未加载出来之前都给隐藏
   let displayStyle = loading ? { "display": "none" } : { "display": "" };
+
+  useEffect(() => {
+    getRankListDataDispatch();
+  }, []);
 
   return (
     <Container>
