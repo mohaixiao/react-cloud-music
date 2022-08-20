@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { renderRoutes } from 'react-router-config';
 import * as actionTypes from './store/actionCreators'
 import Slider from '../../components/slider';
 import RecommendList from '../../components/list';
@@ -27,13 +28,15 @@ function Recommend(props) {
 
   return (
     <Content>
-    <Scroll className="list" onScroll={forceCheck}>
+      <Scroll className="list" onScroll={forceCheck}>
         <div>
           <Slider bannerList={bannerListJS}></Slider>
           <RecommendList recommendList={recommendListJS}></RecommendList>
         </div>
       </Scroll>
       {enterLoading ? <Loading></Loading> : null}
+      // 将目前所在路由的下一层子路由加以渲染
+      {renderRoutes(props.route.routes)}
     </Content>
   )
 }
