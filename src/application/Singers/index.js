@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import LazyLoad, { forceCheck } from 'react-lazyload';
 import Horizen from '../../baseUI/horizen-item';
 import { categoryTypes, alphaTypes } from '../../api/config';
 import Scroll from './../../baseUI/scroll/index';
@@ -29,6 +30,14 @@ function Singers(props) {
   const { singerList, enterLoading, pullUpLoading, pullDownLoading, pageCount } = props;
   const { getHotSingerDispatch, updateDispatch, pullDownRefreshDispatch, pullUpRefreshDispatch } = props;
 
+  const handlePullUp = () => {
+    pullUpRefreshDispatch(category, alpha, category === '', pageCount);
+  };
+
+  const handlePullDown = () => {
+    pullDownRefreshDispatch(category, alpha);
+  };
+
   // 点击selected变化
   let handleUpdateAlpha = (val) => {
     setAlpha(val);
@@ -47,7 +56,7 @@ function Singers(props) {
 
   // 渲染函数，返回歌手列表
   const renderSingerList = () => {
-    const list = singerList ? singerList.toJS(): [];
+    const list = singerList ? singerList.toJS() : [];
     return (
       <List>
         {
@@ -55,7 +64,9 @@ function Singers(props) {
             return (
               <ListItem key={item.accountId + "" + index}>
                 <div className="img_wrapper">
-                  <img src={`${item.picUrl}?param=300x300`} width="100%" height="100%" alt="music" />
+                  <LazyLoad placeholder={<img width="100%" height="100%" src={require('./singer.png')} alt="music" />}>
+                    <img src={`${item.picUrl}?param=300x300`} width="100%" height="100%" alt="music" />
+                  </LazyLoad>
                 </div>
                 <span className="name">{item.name}</span>
               </ListItem>
@@ -81,9 +92,16 @@ function Singers(props) {
           oldVal={alpha}></Horizen>
       </NavContainer>
       <ListContainer>
-        <Scroll>
+        <Scroll
+          pullUp={handlePullUp}
+          pullDown={handlePullDown}
+          pullUpLoading={pullUpLoading}
+          pullDownLoading={pullDownLoading}
+          onScroll={forceCheck}
+        >
           {renderSingerList()}
         </Scroll>
+        {enterLoading ? <Loading></Loading> : null}
       </ListContainer>
     </div>
   )
@@ -110,8 +128,8 @@ const mapDispatchToProps = (dispatch) => {
     // 滑到最底部刷新部分的处理
     pullUpRefreshDispatch(category, alpha, hot, count) {
       dispatch(changePullUpLoading(true));
-      dispatch(changePageCount(count+1));
-      if(hot){
+      dispatch(changePageCount(count + 1));
+      if (hot) {
         dispatch(refreshMoreHotSingerList());
       } else {
         dispatch(refreshMoreSingerList(category, alpha));
@@ -121,13 +139,13 @@ const mapDispatchToProps = (dispatch) => {
     pullDownRefreshDispatch(category, alpha) {
       dispatch(changePullDownLoading(true));
       dispatch(changePageCount(0));
-      if(category === '' && alpha === ''){
+      if (category === '' && alpha === '') {
         dispatch(getHotSingerList());
       } else {
         dispatch(getSingerList(category, alpha));
       }
     }
   }
-};   
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Singers);
