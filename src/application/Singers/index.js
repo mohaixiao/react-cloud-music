@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import LazyLoad, { forceCheck } from 'react-lazyload';
+import { renderRoutes } from 'react-router-config';
 import Horizen from '../../baseUI/horizen-item';
 import { categoryTypes, alphaTypes } from '../../api/config';
 import Scroll from './../../baseUI/scroll/index';
@@ -107,6 +108,7 @@ function Singers(props) {
         </Scroll>
         {enterLoading ? <Loading></Loading> : null}
       </ListContainer>
+      { renderRoutes(props.route.routes) }
     </div>
   )
 }
