@@ -6,8 +6,9 @@ import style from '../../assets/global-style';
 export const Container = styled.div`
   position: fixed;
   top: 90px;
-  bottom: ${props => props.play > 0 ? "60px": 0};
+  bottom: ${props => props.play > 0 ? "60px" : 0};
   width: 100%;
+  /* 标题 */
   .offical,.global {
     margin: 10px 5px;
     padding-top: 15px;
@@ -19,11 +20,12 @@ export const Container = styled.div`
 export const List = styled.ul`
   margin-top: 10px;
   padding: 0 5px;
-  display: ${props => props.globalRank ? "flex": "" };
+  display: ${props => props.globalRank ? "flex" : ""};
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   background: ${style["background-color"]};
+  /* 末尾flex修正 */
   &::after{
     content:"";
     display:block;
@@ -31,14 +33,15 @@ export const List = styled.ul`
   }
 `
 export const ListItem = styled.li`
-  display: ${props => props.tracks.length ? "flex": ""};
+  display: ${props => props.tracks.length ? "flex" : ""};
   padding: 3px 0;
   border-bottom: 1px solid ${style["border-color"]};
   .img_wrapper{
-    width:  ${props => props.tracks.length ? "27vw": "32vw"};
-    height: ${props => props.tracks.length ? "27vw": "32vw"};
+    width:  ${props => props.tracks.length ? "27vw" : "32vw"};
+    height: ${props => props.tracks.length ? "27vw" : "32vw"};
     border-radius: 3px;
     position: relative;
+    /* 遮罩层 */
     .decorate {
       position: absolute;
       bottom: 0;
@@ -52,6 +55,7 @@ export const ListItem = styled.li`
       height: 100%;
       border-radius: 3px;
     }
+    /* 底部字体 */
     .update_frequecy{
       position: absolute;
       left: 7px;

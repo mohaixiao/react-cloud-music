@@ -6,7 +6,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  bottom: ${props => props.play > 0 ? "60px": 0};
+  bottom: ${props => props.play > 0 ? "60px" : 0};
   width: 100%;
   z-index: 100;
   overflow: hidden;
@@ -26,6 +26,16 @@ export const Container = styled.div`
     transition: transform .3s;
     transform: rotateZ(30deg) translate3d(100%, 0, 0);
   }
+`
+
+export const BgLayer = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  z-index: 50;
 `
 export const ImgWrapper = styled.div`
   position: relative;
@@ -87,14 +97,4 @@ export const SongListWrapper = styled.div`
     width: 100%;
     overflow: visible;
   }
-`
-
-export const BgLayer = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  border-radius: 10px;
-  z-index: 50;
 `

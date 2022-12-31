@@ -8,7 +8,7 @@ const defaultState = fromJS({
 });
 
 export default (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case actionTypes.CHANGE_BANNER:
       return state.set('bannerList', action.data);
     case actionTypes.CHANGE_RECOMMEND_LIST:

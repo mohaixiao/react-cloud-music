@@ -29,6 +29,7 @@ export default class Lyric {
       const txt = line.replace(timeExp, '').trim();//现在把时间戳去掉，只剩下歌词文本
       if (txt) {
         if (result[3].length === 3) {
+          // 毫秒位数切割
           result[3] = result[3] / 10;//[00:01.997]中匹配到的997就会被切成99
         }
         this.lines.push({
@@ -101,15 +102,19 @@ export default class Lyric {
     let line = this.lines[this.curLineIndex];
     let delay;
     if (isSeek) {
+      // 到下一行需要的时间 （不是完整的两行时间间隔）
+      // 这一行固定时间 - （当前时间 - 上一行开始的时间startStamp（Date形式））
       delay = line.time - (+new Date() - this.startStamp);
     } else {
       //拿到上一行的歌词开始时间，算间隔
       let preTime = this.lines[this.curLineIndex - 1] ? this.lines[this.curLineIndex - 1].time : 0;
+      // 两行完整的时间间隔
       delay = line.time - preTime;
     }
     this.timer = setTimeout(() => {
       this._callHandler(this.curLineIndex++);
       if (this.curLineIndex < this.lines.length && this.state === STATE_PLAYING) {
+        // 递归下一行
         this._playRest();
       }
     }, delay)

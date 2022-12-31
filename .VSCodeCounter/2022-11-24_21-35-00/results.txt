@@ -1,0 +1,161 @@
+Date : 2022-11-24 21:35:00
+Directory : d:\Demoes\react-cloud-music
+Total : 89 files,  38432 codes, 273 comments, 836 blanks, all 39541 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          4 |     31,823 |          0 |          3 |     31,826 |
+| JavaScript |         79 |      5,062 |        226 |        476 |      5,764 |
+| HTML       |          2 |        896 |         25 |        122 |      1,043 |
+| CSS        |          2 |        558 |         19 |        125 |        702 |
+| XML        |          1 |         55 |          3 |         77 |        135 |
+| Markdown   |          1 |         38 |          0 |         33 |         71 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                          | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                             |         89 |     38,432 |        273 |        836 |     39,541 |
+| api                                                                           |          1 |          4 |          0 |          1 |          5 |
+| public                                                                        |          2 |         45 |         23 |          2 |         70 |
+| src                                                                           |         82 |      6,547 |        250 |        798 |      7,595 |
+| src\api                                                                       |          4 |        444 |         33 |         41 |        518 |
+| src\application                                                               |         49 |      3,309 |        120 |        284 |      3,713 |
+| src\application\Album                                                         |          6 |        333 |          4 |         27 |        364 |
+| src\application\Album\store                                                   |          4 |         43 |          0 |          6 |         49 |
+| src\application\Home                                                          |          2 |         74 |          1 |          8 |         83 |
+| src\application\Player                                                        |         11 |      1,415 |         60 |         98 |      1,573 |
+| src\application\Player\miniPlayer                                             |          2 |        139 |          1 |         11 |        151 |
+| src\application\Player\normalPlayer                                           |          2 |        481 |          5 |         20 |        506 |
+| src\application\Player\play-list                                              |          2 |        356 |         26 |         25 |        407 |
+| src\application\Player\store                                                  |          4 |        165 |         14 |         18 |        197 |
+| src\application\Rank                                                          |          3 |        196 |         12 |         27 |        235 |
+| src\application\Rank\store                                                    |          1 |         36 |          3 |          7 |         46 |
+| src\application\Recommend                                                     |          6 |        121 |          6 |         22 |        149 |
+| src\application\Recommend\store                                               |          4 |         61 |          0 |          9 |         70 |
+| src\application\Search                                                        |          6 |        384 |          5 |         25 |        414 |
+| src\application\Search\store                                                  |          4 |         72 |          0 |         10 |         82 |
+| src\application\Singer                                                        |          6 |        276 |         12 |         27 |        315 |
+| src\application\Singer\store                                                  |          4 |         50 |          0 |          7 |         57 |
+| src\application\Singers                                                       |          7 |        345 |         18 |         38 |        401 |
+| src\application\Singers\store                                                 |          4 |        118 |          9 |         13 |        140 |
+| src\application\SongsList                                                     |          2 |        165 |          2 |         12 |        179 |
+| src\assets                                                                    |          6 |      1,542 |         27 |        330 |      1,899 |
+| src\assets\iconfont                                                           |          5 |      1,507 |         24 |        326 |      1,857 |
+| src\baseUI                                                                    |         12 |        806 |         28 |        103 |        937 |
+| src\baseUI\confirm                                                            |          1 |         99 |          1 |          7 |        107 |
+| src\baseUI\header                                                             |          1 |         47 |          2 |          4 |         53 |
+| src\baseUI\horizen-item                                                       |          1 |         78 |          2 |          8 |         88 |
+| src\baseUI\loading                                                            |          1 |         48 |          1 |          4 |         53 |
+| src\baseUI\loading-v2                                                         |          1 |         52 |          0 |          4 |         56 |
+| src\baseUI\music-note                                                         |          1 |         75 |          3 |         14 |         92 |
+| src\baseUI\progress-bar                                                       |          1 |        104 |          3 |         15 |        122 |
+| src\baseUI\progress-circle                                                    |          1 |         35 |          2 |          4 |         41 |
+| src\baseUI\scroll                                                             |          2 |        143 |         11 |         26 |        180 |
+| src\baseUI\search-box                                                         |          1 |         72 |          2 |         12 |         86 |
+| src\baseUI\toast                                                              |          1 |         53 |          1 |          5 |         59 |
+| src\components                                                                |          4 |        181 |          6 |         12 |        199 |
+| src\components\list                                                           |          2 |        109 |          2 |          8 |        119 |
+| src\components\slider                                                         |          2 |         72 |          4 |          4 |         80 |
+| src\routes                                                                    |          1 |         67 |          0 |          2 |         69 |
+| src\store                                                                     |          2 |         25 |          0 |          4 |         29 |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                      | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\Demoes\react-cloud-music\README.md                                         | Markdown   |         38 |          0 |         33 |         71 |
+| d:\Demoes\react-cloud-music\api\index.js                                      | JavaScript |          4 |          0 |          1 |          5 |
+| d:\Demoes\react-cloud-music\package-lock.json                                 | JSON       |     31,744 |          0 |          1 |     31,745 |
+| d:\Demoes\react-cloud-music\package.json                                      | JSON       |         51 |          0 |          1 |         52 |
+| d:\Demoes\react-cloud-music\public\index.html                                 | HTML       |         20 |         23 |          1 |         44 |
+| d:\Demoes\react-cloud-music\public\manifest.json                              | JSON       |         25 |          0 |          1 |         26 |
+| d:\Demoes\react-cloud-music\src\App.js                                        | JavaScript |         23 |          0 |          4 |         27 |
+| d:\Demoes\react-cloud-music\src\api\config.js                                 | JavaScript |        198 |          5 |          8 |        211 |
+| d:\Demoes\react-cloud-music\src\api\lyric-parser.js                           | JavaScript |         96 |         14 |          7 |        117 |
+| d:\Demoes\react-cloud-music\src\api\request.js                                | JavaScript |         57 |          4 |         15 |         76 |
+| d:\Demoes\react-cloud-music\src\api\utils.js                                  | JavaScript |         93 |         10 |         11 |        114 |
+| d:\Demoes\react-cloud-music\src\application\Album\index.js                    | JavaScript |        149 |          4 |         17 |        170 |
+| d:\Demoes\react-cloud-music\src\application\Album\store\actionCreators.js     | JavaScript |         22 |          0 |          3 |         25 |
+| d:\Demoes\react-cloud-music\src\application\Album\store\constants.js          | JavaScript |          2 |          0 |          0 |          2 |
+| d:\Demoes\react-cloud-music\src\application\Album\store\index.js              | JavaScript |          3 |          0 |          1 |          4 |
+| d:\Demoes\react-cloud-music\src\application\Album\store\reducer.js            | JavaScript |         16 |          0 |          2 |         18 |
+| d:\Demoes\react-cloud-music\src\application\Album\style.js                    | JavaScript |        141 |          0 |          4 |        145 |
+| d:\Demoes\react-cloud-music\src\application\Home\index.js                     | JavaScript |         29 |          0 |          5 |         34 |
+| d:\Demoes\react-cloud-music\src\application\Home\style.js                     | JavaScript |         45 |          1 |          3 |         49 |
+| d:\Demoes\react-cloud-music\src\application\Player\index.js                   | JavaScript |        274 |         14 |         24 |        312 |
+| d:\Demoes\react-cloud-music\src\application\Player\miniPlayer\index.js        | JavaScript |         52 |          0 |          9 |         61 |
+| d:\Demoes\react-cloud-music\src\application\Player\miniPlayer\style.js        | JavaScript |         87 |          1 |          2 |         90 |
+| d:\Demoes\react-cloud-music\src\application\Player\normalPlayer\index.js      | JavaScript |        255 |          4 |         18 |        277 |
+| d:\Demoes\react-cloud-music\src\application\Player\normalPlayer\style.js      | JavaScript |        226 |          1 |          2 |        229 |
+| d:\Demoes\react-cloud-music\src\application\Player\play-list\index.js         | JavaScript |        250 |         26 |         23 |        299 |
+| d:\Demoes\react-cloud-music\src\application\Player\play-list\style.js         | JavaScript |        106 |          0 |          2 |        108 |
+| d:\Demoes\react-cloud-music\src\application\Player\store\actionCreators.js    | JavaScript |         62 |          0 |         11 |         73 |
+| d:\Demoes\react-cloud-music\src\application\Player\store\constants.js         | JavaScript |         10 |          0 |          0 |         10 |
+| d:\Demoes\react-cloud-music\src\application\Player\store\index.js             | JavaScript |          4 |          0 |          1 |          5 |
+| d:\Demoes\react-cloud-music\src\application\Player\store\reducer.js           | JavaScript |         89 |         14 |          6 |        109 |
+| d:\Demoes\react-cloud-music\src\application\Rank\index.js                     | JavaScript |         89 |          4 |         18 |        111 |
+| d:\Demoes\react-cloud-music\src\application\Rank\store\index.js               | JavaScript |         36 |          3 |          7 |         46 |
+| d:\Demoes\react-cloud-music\src\application\Rank\style.js                     | JavaScript |         71 |          5 |          2 |         78 |
+| d:\Demoes\react-cloud-music\src\application\Recommend\index.js                | JavaScript |         53 |          6 |         12 |         71 |
+| d:\Demoes\react-cloud-music\src\application\Recommend\store\actionCreators.js | JavaScript |         35 |          0 |          4 |         39 |
+| d:\Demoes\react-cloud-music\src\application\Recommend\store\constants.js      | JavaScript |          3 |          0 |          2 |          5 |
+| d:\Demoes\react-cloud-music\src\application\Recommend\store\index.js          | JavaScript |          4 |          0 |          1 |          5 |
+| d:\Demoes\react-cloud-music\src\application\Recommend\store\reducer.js        | JavaScript |         19 |          0 |          2 |         21 |
+| d:\Demoes\react-cloud-music\src\application\Recommend\style.js                | JavaScript |          7 |          0 |          1 |          8 |
+| d:\Demoes\react-cloud-music\src\application\Search\index.js                   | JavaScript |        196 |          5 |         12 |        213 |
+| d:\Demoes\react-cloud-music\src\application\Search\store\actionCreators.js    | JavaScript |         42 |          0 |          7 |         49 |
+| d:\Demoes\react-cloud-music\src\application\Search\store\constants.js         | JavaScript |          4 |          0 |          0 |          4 |
+| d:\Demoes\react-cloud-music\src\application\Search\store\index.js             | JavaScript |          4 |          0 |          1 |          5 |
+| d:\Demoes\react-cloud-music\src\application\Search\store\reducer.js           | JavaScript |         22 |          0 |          2 |         24 |
+| d:\Demoes\react-cloud-music\src\application\Search\style.js                   | JavaScript |        116 |          0 |          3 |        119 |
+| d:\Demoes\react-cloud-music\src\application\Singer\index.js                   | JavaScript |        130 |         12 |         15 |        157 |
+| d:\Demoes\react-cloud-music\src\application\Singer\store\actionCreators.js    | JavaScript |         24 |          0 |          4 |         28 |
+| d:\Demoes\react-cloud-music\src\application\Singer\store\constants.js         | JavaScript |          3 |          0 |          0 |          3 |
+| d:\Demoes\react-cloud-music\src\application\Singer\store\index.js             | JavaScript |          4 |          0 |          1 |          5 |
+| d:\Demoes\react-cloud-music\src\application\Singer\store\reducer.js           | JavaScript |         19 |          0 |          2 |         21 |
+| d:\Demoes\react-cloud-music\src\application\Singer\style.js                   | JavaScript |         96 |          0 |          5 |        101 |
+| d:\Demoes\react-cloud-music\src\application\Singers\data.js                   | JavaScript |         26 |          0 |          4 |         30 |
+| d:\Demoes\react-cloud-music\src\application\Singers\index.js                  | JavaScript |        148 |          9 |         17 |        174 |
+| d:\Demoes\react-cloud-music\src\application\Singers\store\actionCreators.js   | JavaScript |         84 |          9 |          9 |        102 |
+| d:\Demoes\react-cloud-music\src\application\Singers\store\constants.js        | JavaScript |          5 |          0 |          1 |          6 |
+| d:\Demoes\react-cloud-music\src\application\Singers\store\index.js            | JavaScript |          4 |          0 |          1 |          5 |
+| d:\Demoes\react-cloud-music\src\application\Singers\store\reducer.js          | JavaScript |         25 |          0 |          2 |         27 |
+| d:\Demoes\react-cloud-music\src\application\Singers\style.js                  | JavaScript |         53 |          0 |          4 |         57 |
+| d:\Demoes\react-cloud-music\src\application\SongsList\index.js                | JavaScript |         71 |          2 |         10 |         83 |
+| d:\Demoes\react-cloud-music\src\application\SongsList\style.js                | JavaScript |         94 |          0 |          2 |         96 |
+| d:\Demoes\react-cloud-music\src\assets\global-style.js                        | JavaScript |         35 |          3 |          4 |         42 |
+| d:\Demoes\react-cloud-music\src\assets\iconfont\demo.css                      | CSS        |        435 |         19 |         86 |        540 |
+| d:\Demoes\react-cloud-music\src\assets\iconfont\demo_index.html               | HTML       |        876 |          2 |        121 |        999 |
+| d:\Demoes\react-cloud-music\src\assets\iconfont\iconfont.css                  | CSS        |        123 |          0 |         39 |        162 |
+| d:\Demoes\react-cloud-music\src\assets\iconfont\iconfont.js                   | JavaScript |         18 |          0 |          3 |         21 |
+| d:\Demoes\react-cloud-music\src\assets\iconfont\iconfont.svg                  | XML        |         55 |          3 |         77 |        135 |
+| d:\Demoes\react-cloud-music\src\baseUI\confirm\index.js                       | JavaScript |         99 |          1 |          7 |        107 |
+| d:\Demoes\react-cloud-music\src\baseUI\header\index.js                        | JavaScript |         47 |          2 |          4 |         53 |
+| d:\Demoes\react-cloud-music\src\baseUI\horizen-item\index.js                  | JavaScript |         78 |          2 |          8 |         88 |
+| d:\Demoes\react-cloud-music\src\baseUI\loading-v2\index.js                    | JavaScript |         52 |          0 |          4 |         56 |
+| d:\Demoes\react-cloud-music\src\baseUI\loading\index.js                       | JavaScript |         48 |          1 |          4 |         53 |
+| d:\Demoes\react-cloud-music\src\baseUI\music-note\index.js                    | JavaScript |         75 |          3 |         14 |         92 |
+| d:\Demoes\react-cloud-music\src\baseUI\progress-bar\index.js                  | JavaScript |        104 |          3 |         15 |        122 |
+| d:\Demoes\react-cloud-music\src\baseUI\progress-circle\index.js               | JavaScript |         35 |          2 |          4 |         41 |
+| d:\Demoes\react-cloud-music\src\baseUI\scroll\index.js                        | JavaScript |        120 |         11 |         23 |        154 |
+| d:\Demoes\react-cloud-music\src\baseUI\scroll\style.js                        | JavaScript |         23 |          0 |          3 |         26 |
+| d:\Demoes\react-cloud-music\src\baseUI\search-box\index.js                    | JavaScript |         72 |          2 |         12 |         86 |
+| d:\Demoes\react-cloud-music\src\baseUI\toast\index.js                         | JavaScript |         53 |          1 |          5 |         59 |
+| d:\Demoes\react-cloud-music\src\components\list\index.js                      | JavaScript |         41 |          1 |          5 |         47 |
+| d:\Demoes\react-cloud-music\src\components\list\style.js                      | JavaScript |         68 |          1 |          3 |         72 |
+| d:\Demoes\react-cloud-music\src\components\slider\index.js                    | JavaScript |         44 |          2 |          2 |         48 |
+| d:\Demoes\react-cloud-music\src\components\slider\style.js                    | JavaScript |         28 |          2 |          2 |         32 |
+| d:\Demoes\react-cloud-music\src\index.js                                      | JavaScript |          6 |          3 |          3 |         12 |
+| d:\Demoes\react-cloud-music\src\routes\index.js                               | JavaScript |         67 |          0 |          2 |         69 |
+| d:\Demoes\react-cloud-music\src\serviceWorker.js                              | JavaScript |         92 |         31 |         13 |        136 |
+| d:\Demoes\react-cloud-music\src\store\index.js                                | JavaScript |          8 |          0 |          2 |         10 |
+| d:\Demoes\react-cloud-music\src\store\reducer.js                              | JavaScript |         17 |          0 |          2 |         19 |
+| d:\Demoes\react-cloud-music\src\style.js                                      | JavaScript |         52 |          2 |          2 |         56 |
+| d:\Demoes\react-cloud-music\vercel.json                                       | JSON       |          3 |          0 |          0 |          3 |
+| Total                                                                         |            |     38,432 |        273 |        836 |     39,541 |
++-------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

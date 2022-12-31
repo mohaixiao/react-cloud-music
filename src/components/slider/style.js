@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import style from '../../assets/global-style';
+import styled from "styled-components";
+import style from '../../assets/global-style'
 
 export const SliderContainer = styled.div`
   position: relative;
@@ -7,28 +7,25 @@ export const SliderContainer = styled.div`
   width: 100%;
   height: 100%;
   margin: auto;
-  /* overflow: hidden; */
-  .before{
+  background: white;
+  /* 顶部红色阴影拉长 */
+    .before {
     position: absolute;
     top: -300px;
     height: 400px;
     width: 100%;
     background: ${style["theme-color"]};
   }
-  .slider-container{
+
+  .slider-container {
     position: relative;
     width: 98%;
     height: 160px;
     overflow: hidden;
     margin: auto;
     border-radius: 6px;
-    .slider-nav{
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-pagination-bullet-active{
+    /* current bullet */
+    .swiper-pagination-bullet-active {
       background: ${style["theme-color"]};
     }
   }

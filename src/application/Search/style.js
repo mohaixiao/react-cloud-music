@@ -6,7 +6,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  bottom: ${props => props.play > 0 ? "60px": 0};
+  bottom: ${props => props.play > 0 ? "60px" : 0};
   width: 100%;
   z-index: 100;
   overflow: hidden;
@@ -27,12 +27,13 @@ export const Container = styled.div`
     transform: translate3d(100%, 0, 0);
   }
 `
+
 export const ShortcutWrapper = styled.div`
   position: absolute;
   top: 40px;
   bottom: 0;
   width: 100%;
-  display: ${props => props.show ? "": "none"};
+  display: ${props => props.show ? "" : "none"};
 `
 
 export const HotKey = styled.div`
@@ -53,7 +54,6 @@ export const HotKey = styled.div`
     color: ${style["font-color-desc"]};
   }
 `
-
 export const List = styled.div`
   display: flex;
   margin: auto;
@@ -87,6 +87,8 @@ export const ListItem = styled.div`
     font-weight: 500;
   }
 `;
+
+
 export const SongItem = styled.ul`
   >li{
     display: flex;

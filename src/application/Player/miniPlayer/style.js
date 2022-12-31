@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import style from '../../../assets/global-style';
 
 const rotate = keyframes`
@@ -20,6 +20,7 @@ export const MiniPlayerContainer = styled.div`
   width: 100%;
   height: 60px;
   background: ${style["highlight-background-color"]};
+  /* 退出 */
   &.mini-enter{
     transform: translate3d(0, 100%, 0);
   }
@@ -41,6 +42,7 @@ export const MiniPlayerContainer = styled.div`
       height: 100%;
       img{
         border-radius: 50%;
+        /* 旋转暂停 */
         &.play{
           animation: ${rotate} 10s infinite;
           &.pause{

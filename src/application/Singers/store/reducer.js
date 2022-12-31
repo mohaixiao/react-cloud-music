@@ -3,10 +3,10 @@ import { fromJS } from 'immutable';
 
 const defaultState = fromJS({
   singerList: [],
-  enterLoading: true,
-  pullUpLoading: false,
-  pullDownLoading: false,
-  pageCount: 0
+  enterLoading: true,     //控制进场Loading
+  pullUpLoading: false,   //控制上拉加载动画
+  pullDownLoading: false, //控制下拉加载动画
+  pageCount: 0            //当前页数
 });
 
 export default (state = defaultState, action) => {

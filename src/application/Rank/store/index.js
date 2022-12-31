@@ -5,10 +5,15 @@ import { getRankListRequest } from '../../../api/request';
 export const CHANGE_RANK_LIST = 'home/rank/CHANGE_RANK_LIST';
 export const CHANGE_LOADING = 'home/rank/CHANGE_LOADING';
 
-//actionCrreator
+//actionCreator
 const changeRankList = (data) => ({
   type: CHANGE_RANK_LIST,
   data: fromJS(data)
+})
+
+const changeLoading = (data) => ({
+  type: CHANGE_LOADING,
+  data
 })
 
 export const getRankList = () => {
@@ -21,11 +26,6 @@ export const getRankList = () => {
   }
 }
 
-const changeLoading = (data) => ({
-  type: CHANGE_LOADING,
-  data
-})
-
 //reducer
 const defaultState = fromJS({
   rankList: [],
@@ -33,7 +33,7 @@ const defaultState = fromJS({
 })
 
 const reducer = (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case CHANGE_RANK_LIST:
       return state.set('rankList', action.data);
     case CHANGE_LOADING:

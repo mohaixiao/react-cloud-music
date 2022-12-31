@@ -9,6 +9,7 @@ const rotate = keyframes`
     transform: rotate(360deg);
   }
 `;
+
 export const NormalPlayerContainer = styled.div`
   position: fixed;
   left: 0;
@@ -17,6 +18,8 @@ export const NormalPlayerContainer = styled.div`
   bottom: 0;
   z-index: 1000;
   background: ${style["background-color"]};
+
+  /* 退出 */
   &.normal-enter,
   &.normal-exit-done {
     .top {
@@ -39,6 +42,7 @@ export const NormalPlayerContainer = styled.div`
   &.normal-exit-active {
     opacity: 0;
   }
+
   .background {
     position: absolute;
     left: 0;
@@ -48,13 +52,15 @@ export const NormalPlayerContainer = styled.div`
     z-index: -1;
     opacity: 0.6;
     filter: blur(20px);
+    /* 阴影层次 */
     &.layer {
       background: ${style["font-color-desc"]};
       opacity: 0.3;
       filter: none;
     }
   }
-`;
+`
+
 export const Top = styled.div`
   position: relative;
   margin-bottom: 25px;
@@ -89,6 +95,7 @@ export const Top = styled.div`
     ${style.noWrap()};
   }
 `;
+
 export const Middle = styled.div`
   position: fixed;
   width: 100%;
@@ -98,6 +105,7 @@ export const Middle = styled.div`
   font-size: 0;
   overflow: hidden;
 `;
+
 export const CDWrapper = styled.div`
   position: absolute;
   margin: auto;
@@ -143,29 +151,7 @@ export const Bottom = styled.div`
   bottom: 50px;
   width: 100%;
 `;
-export const ProgressWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  width: 80%;
-  margin: 0px auto;
-  padding: 10px 0;
-  .time {
-    color: ${style["font-color-desc"]};
-    font-size: ${style["font-size-s"]};
-    flex: 0 0 30px;
-    line-height: 30px;
-    width: 30px;
-    &.time-l {
-      text-align: left;
-    }
-    &.time-r {
-      text-align: right;
-    }
-  }
-  .progress-bar-wrapper {
-    flex: 1;
-  }
-`;
+
 export const Operators = styled.div`
   display: flex;
   align-items: center;
@@ -198,6 +184,31 @@ export const Operators = styled.div`
     color: ${style["theme-color"]};
   }
 `;
+
+export const ProgressWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0px auto;
+  padding: 10px 0;
+  .time {
+    color: ${style["font-color-desc"]};
+    font-size: ${style["font-size-s"]};
+    flex: 0 0 30px;
+    line-height: 30px;
+    width: 30px;
+    &.time-l {
+      text-align: left;
+    }
+    &.time-r {
+      text-align: right;
+    }
+  }
+  .progress-bar-wrapper {
+    flex: 1;
+  }
+`;
+
 export const LyricContainer = styled.div`
   position: absolute;
   left: 0;

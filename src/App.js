@@ -1,25 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { renderRoutes } from "react-router-config";
 import { Provider } from 'react-redux'
-import { GlobalStyle } from  './style'
-import { renderRoutes } from 'react-router-config'
-import { IconStyle } from './assets/iconfont/iconfont'
-import store from './store/index'
+
+import { fetchBannerList } from './application/Recommend/recommendSlice';
+
 import routes from './routes/index.js'
-import { HashRouter } from 'react-router-dom';
-import { Data } from './application/Singers/data';
+import { store } from './app/store'
+
+import { GlobalStyle } from "./style";
+import { IconStyle } from './assets/iconfont/iconfont';
+import { HashRouter } from "react-router-dom";
+
+// store.dispatch(fetchBannerList());
 
 function App() {
   return (
     <Provider store={store}>
       <HashRouter>
-        <GlobalStyle></GlobalStyle>
-        <IconStyle></IconStyle>
-        <Data>
-          { renderRoutes(routes) }
-        </Data>
+        <GlobalStyle />
+        <IconStyle />
+        {renderRoutes(routes)}
       </HashRouter>
     </Provider>
   )
 }
 
 export default App;
+
+

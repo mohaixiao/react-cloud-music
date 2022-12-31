@@ -1,5 +1,6 @@
 import * as actionTypes from './constants';
 import { fromJS } from 'immutable';
+
 import { playMode } from './../../../api/config';
 import { findIndex } from '../../../api/utils';//注意引入工具方法
 
