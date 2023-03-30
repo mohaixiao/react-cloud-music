@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import MiniPlayer from './miniPlayer';
 import NormalPlayer from './normalPlayer';
-import Toast from "../../baseUI/Toast/index";
+import Toast from "../../baseUI/toast/index";
 import PlayList from './play-list/index';
 
 import { getSongUrl, isEmptyObject, shuffle, findIndex } from "../../api/utils";

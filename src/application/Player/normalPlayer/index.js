@@ -208,7 +208,7 @@ const NormalPlayer = memo((props) => {
                         classNames="fade"
                         in={currentState.current !== "lyric"}
                     >
-                          <CDWrapper style={{visibility: currentState.current !== "lyric" ? "visible" : "hidden"}}>
+                        <CDWrapper style={{ visibility: currentState.current !== "lyric" ? "visible" : "hidden" }}>
                             <div className="cd">
                                 <img
                                     className={`image play ${playing ? "" : "pause"}`}
