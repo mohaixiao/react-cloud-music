@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Redirect } from "react-router-dom";
-
+import Skeleton from 'react-loading-skeleton';
 
 
 const Home = lazy(() => import("../application/Home"));
@@ -13,7 +13,7 @@ const Search = lazy(() => import("./../application/Search"));
 
 const SuspenseComponent = Component => props => {
     return (
-        <Suspense fallback={null}>
+        <Suspense fallback={<Skeleton />}>
             <Component {...props}></Component>
         </Suspense>
     )

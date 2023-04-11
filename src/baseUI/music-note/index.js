@@ -42,7 +42,6 @@ const MusicNote = forwardRef((props, ref) => {
             let node = createNode(`<div class="iconfont">&#xe642;</div>`);
             iconsRef.current.appendChild(node);
         }
-        console.log(iconsRef.current, 'ok');
         // 类数组转换成数组，当然也可以用 [...xxx] 解构语法或者 Array.from ()
         let domArray = [].slice.call(iconsRef.current.children)
         domArray.forEach(item => {

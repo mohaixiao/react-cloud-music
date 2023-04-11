@@ -2,33 +2,76 @@ import axios from 'axios';
 
 export const baseUrl = 'http://localhost:4000';
 
-// axios的实例及拦截器配置
-const axiosInstance = axios.create({
-    baseURL: baseUrl
+// 创建 Axios 实例
+const instance = axios.create({
+    baseURL: baseUrl,
+    timeout: 10000,
 });
 
-axiosInstance.interceptors.response.use(
-    res => res.data,
-    err => {
-        if (err && err.response) {
-            switch (err.response.status) {
-                case 400:
-                    console.log("请求错误");
-                    break;
-                case 401:
-                    console.log("未授权访问");
-                    break;
-                default:
-                    console.log("其他错误信息");
-            }
-        }
-        return err;
+// 请求拦截器
+instance.interceptors.request.use(
+    config => {
+        // 在请求头中添加 token 等信息
+        return config;
+    },
+    error => {
+        console.log(error, 'error');
+        return Promise.reject(error);
     }
 );
 
-export {
-    axiosInstance
-};
+// 响应拦截器
+instance.interceptors.response.use(
+    response => {
+        const res = response.data;
+        // 在这里可以统一处理一些后端返回的错误码和错误信息
+        if (res.code !== 200) {
+            console.log('请求失败：', res.msg);
+            return Promise.reject(new Error(res.msg));
+        } else {
+            return res;
+        }
+    },
+    error => {
+        console.log('请求错误：', error);
+        if (!window.navigator.onLine) {
+            // 断网情况下的处理
+            console.log('网络异常，请检查网络连接！');
+        } else if (error.response) {
+            console.log('响应状态码：', error.response.status);
+            return Promise.reject(new Error(`请求错误：${error.message}`));
+        } else if (error.code === 'ECONNABORTED') {
+            console.log('请求超时：', error.message);
+            return Promise.reject(new Error('请求超时，请稍候再试！'));
+        } else {
+            return Promise.reject(error);
+        }
+    }
+);
+
+
+// 封装 get 请求
+export function get(url, params = {}) {
+    return instance.get(url, {
+        params: params,
+    });
+}
+
+// 封装 post 请求
+export function post(url, data = {}) {
+    return instance.post(url, data);
+}
+
+// 封装 put 请求
+export function put(url, data = {}) {
+    return instance.put(url, data);
+}
+
+// 封装 delete 请求
+export function del(url, params = {}) {
+    return instance.delete(url, { params: params });
+}
+
 
 //歌手种类
 export const categoryTypes = [{

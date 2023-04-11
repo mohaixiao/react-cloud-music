@@ -70,10 +70,7 @@ export default memo(function Singers(props) {
         dispatch(fetchSingerList({ category: val, alpha, pageCount: 0 }));
     }
 
-    // 上拉 滑动到最底部刷新部分的处理
-    const handlePullUp = () => {
-        pullUpRefreshDispatch(category, alpha, pageCount);
-    }
+
 
     // 滑到最底部刷新部分的处理
     const pullUpRefreshDispatch = (category, alpha, pageCount) => {
@@ -87,10 +84,12 @@ export default memo(function Singers(props) {
         }
     }
 
-    // 下拉
-    const handlePullDown = () => {
-        pullDownRefreshDispatch(category, alpha);
-    };
+    // 上拉 滑动到最底部刷新部分的处理
+    const handlePullUp = () => {
+        pullUpRefreshDispatch(category, alpha, pageCount);
+    }
+
+
 
     //顶部下拉刷新
     const pullDownRefreshDispatch = (category, alpha) => {
@@ -102,6 +101,11 @@ export default memo(function Singers(props) {
             dispatch(fetchSingerList({ category, alpha, pageCount: 0 }));
         }
     }
+
+    // 下拉
+    const handlePullDown = () => {
+        pullDownRefreshDispatch(category, alpha);
+    };
 
     // 渲染函数，返回歌手列表
     const renderSingerList = () => {
