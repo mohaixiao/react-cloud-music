@@ -79,7 +79,6 @@ const Scroll = forwardRef((props, ref) => {
         //判断是否滑动到了底部
         // 触发时机：用户手指离开滚动区域
         bScroll.on('scrollEnd', () => {
-            console.log(bScroll.y, bScroll.maxScrollY);
             if (bScroll.y <= bScroll.maxScrollY + 100) {
                 pullUpDebounce()
             }
@@ -93,7 +92,6 @@ const Scroll = forwardRef((props, ref) => {
     useEffect(() => {
         if (!bScroll || !pullDown) return;
         bScroll.on('touchEnd', (pos) => {
-            console.log(pos.y);
             if (pos.y > 50) {
                 pullDownDebounce();
             }

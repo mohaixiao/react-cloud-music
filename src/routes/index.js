@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from "react";
 import { Redirect } from "react-router-dom";
 import Skeleton from 'react-loading-skeleton';
 
-
 const Home = lazy(() => import("../application/Home"));
 const Recommend = lazy(() => import("../application/Recommend/"));
 const Singers = lazy(() => import("../application/Singers"));
